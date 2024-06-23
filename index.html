@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,25 +29,25 @@
                 <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/HdLqlTSaIuc?cc_lang_pref=fr&cc_load_policy=1" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-        <div id="about-me">
+        <div id="about-me" typeof="Person">
             <h2>About Me</h2>
-            <p id="about-me-text">
+            <p id="about-me-text" property="description">
                 I'm a computer science student at Sup Galilee. Apart from being a nerd, I love reading, dancing, and singing. Here's a video of me when I was 16 years old and obsessed (still) with astrophysics :). Welcome to my portfolio !!
             </p>
         </div>
         <div id="resume-section">
             <h2>Resume</h2>
-            <div id="resume-content"></div>
+            <div id="resume-content" typeof="CreativeWork"></div>
         </div>
-        <div id="contact-section">
+        <div id="contact-section" typeof="ContactPoint">
             <h2>Contact</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" property="contactType">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" property="email">
                 <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="message" property="description"></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>
@@ -127,3 +127,4 @@
     </script>
 </body>
 </html>
+
