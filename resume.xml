@@ -1,0 +1,77 @@
+<resume>
+    <contact>
+        <address>14 avenue 18 Juin 1940, 95800, Epinay-sur-Seine, France</address>
+        <name>Wissal Bendidi</name>
+        <email1>wissal.bendidi@edu.univ-paris13.fr</email1>
+        <email2>wissalbendidi.ing@gmail.com</email2>
+        <linkedin>linkedin.com/in/wissal-bendidi</linkedin>
+        <github>github.com/wissbendidi</github>
+        <phone>+33 7 53 50 94 92</phone>
+    </contact>
+    <skills>
+        <programming_languages>Python, SQL, C, Java, MATLAB/Octave</programming_languages>
+        <python_libraries>Numpy, Spicy, Pandas, Flask, Scikit-Learn</python_libraries>
+        <languages>Trilingual: French, English, Arabic</languages>
+    </skills>
+    <projects>
+        <project>
+            <name>Metro Route Calculator</name>
+            <description>Representation of the problem as a graph and implementation of Dijkstra's algorithm in the data structure. (C Language)</description>
+            <link>https://github.com/wissbendidi/metro-lines</link>
+        </project>
+        <project>
+            <name>Coffee Machine</name>
+            <description>Automated coffee machine system coded in Java to manage orders, payments, and deliveries.</description>
+            <link>https://github.com/wissbendidi/cofee-machine</link>
+        </project>
+        <project>
+            <name>Contagion</name>
+            <description>Modeling and design of a mobile application to track the evolution of an epidemic within a population, modeling it as the spread of images within a given population.</description>
+        </project>
+        <project>
+            <name>Ecosystem</name>
+            <description>Representation of an ecosystem and its properties. Coded in Java, this project aims to model life in nature (prey/predator relationship) and highlight the impact of weather and geography on living beings.</description>
+            <link>https://github.com/wissbendidi/ecosystem</link>
+        </project>
+        <project>
+            <name>Real Estate Price Prediction Algorithm</name>
+            <description>Linear regression model to predict sale prices using Kaggle data.</description>
+        </project>
+        <project>
+            <name>Revolute Deliverable</name>
+            <description>Understanding Revolut customers and reducing user churn rate by defining indicators to distinguish active users from inactive users.</description>
+            <link>https://github.com/wissbendidi/revolute_deliv</link>
+        </project>
+    </projects>
+    <experience>
+        <job>
+            <role>Responsible for IT development</role>
+            <company>Human2Sport Hackathon</company>
+            <years>Oct 2022</years>
+            <description>Development of websites and desktop applications for the JOP 2024.</description>
+        </job>
+        <job>
+            <role>Team Leader / Mobile Application Design</role>
+            <company>Technovation Challenge</company>
+            <years>2018</years>
+            <description>Design of a mobile application for addiction prevention.</description>
+        </job>
+    </experience>
+    <education>
+        <degree>
+            <title>Engineering Course in Computer Science</title>
+            <institution>Institut Galilée, Sorbonne Paris Nord University</institution>
+            <years>Current</years>
+        </degree>
+        <degree>
+            <title>Preparatory Course for Grandes Écoles (PSI)</title>
+            <institution>Al Qalam Preparatory Center</institution>
+            <years>2020-2022</years>
+        </degree>
+        <degree>
+            <title>Baccalaureate in Physical Sciences, High Honors</title>
+            <institution>Al Qalam School Complex</institution>
+            <years>2019-2020</years>
+        </degree>
+    </education>
+</resume>
