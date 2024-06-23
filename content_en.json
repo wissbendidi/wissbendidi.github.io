@@ -1,0 +1,14 @@
+{
+    "headline": "Welcome to my portfolio",
+    "text": "This is the content of the page in English.",
+    "about": "I'm a computer science student at Sup Galilee. Apart from being a nerd, I love reading, dancing, and singing. Here's a video of me when I was 16 years old and obsessed (still) with astrophysics :). Welcome to my portfolio !!",
+    "contact": {
+        "title": "Contact",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "send": "Send"
+        }
+    }
+}

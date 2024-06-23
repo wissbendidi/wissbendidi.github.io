@@ -1,0 +1,14 @@
+{
+    "headline": "Bienvenue sur mon portfolio",
+    "text": "Ceci est le contenu de la page en français.",
+    "about": "Je suis étudiant en informatique à Sup Galilée. En plus d'être un nerd, j'aime lire, danser et chanter. Voici une vidéo de moi quand j'avais 16 ans et que j'étais obsédé (je le suis toujours) par l'astrophysique :). Bienvenue sur mon portfolio !!",
+    "contact": {
+        "title": "Contact",
+        "form": {
+            "name": "Nom",
+            "email": "E-mail",
+            "message": "Message",
+            "send": "Envoyer"
+        }
+    }
+}
