@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" prefix="og: http://ogp.me/ns#">
+<html lang="fr" prefix="og: http://ogp.me/ns# schema: http://schema.org/">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,44 +16,48 @@
             <a href="?lang=en">EN</a>
             <a href="?lang=ar">AR</a>
         </div>
-        <h1 property="name">Bienvenue sur mon portfolio </h1>
+        <h1 property="name">Bienvenue sur mon portfolio</h1>
     </header>
     <main>
-        <div typeof="WebPage">
+        <section typeof="WebPageElement" property="mainContentOfPage">
             <h2 property="headline">Contenu Principal</h2>
             <p property="text">Ceci est le contenu de la page en français.</p>
-        </div>
-        <div class="video-section">
-            <h2>Vidéo Multilingue</h2>
+        </section>
+        <section class="video-section" typeof="VideoObject">
+            <h2 property="name">Vidéo Multilingue</h2>
             <div id="video-container">
                 <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/HdLqlTSaIuc?cc_lang_pref=fr&cc_load_policy=1" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </div>
-        <div id="about-me" typeof="Person">
+        </section>
+        <section id="about-me" typeof="Person">
             <h2>About Me</h2>
             <p id="about-me-text" property="description">
                 I'm a computer science student at Sup Galilee. Apart from being a nerd, I love reading, dancing, and singing. Here's a video of me when I was 16 years old and obsessed (still) with astrophysics :). Welcome to my portfolio !!
             </p>
-        </div>
-        <div id="resume-section">
+        </section>
+        <section id="resume-section" typeof="CreativeWork">
             <h2>Resume</h2>
-            <div id="resume-content" typeof="CreativeWork"></div>
-        </div>
-        <div id="contact-section" typeof="ContactPoint">
+            <div id="resume-content"></div>
+        </section>
+        <section id="projects-section" typeof="CollectionPage">
+            <h2 property="name">Projects</h2>
+            <div id="projects-list" property="hasPart"></div>
+        </section>
+        <section id="contact-section" typeof="ContactPoint">
             <h2>Contact</h2>
             <form id="contact-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" property="contactType">
+                <input type="text" id="name" name="name" property="name">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" property="email">
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" property="description"></textarea>
+                <textarea id="message" name="message" property="message"></textarea>
                 <button type="submit">Send</button>
             </form>
-        </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 Mon Site Multilingue</p>
+        <p>&copy; 2024 <span property="name">Mon Site Multilingue</span></p>
     </footer>
 
     <script>
@@ -70,6 +74,14 @@
                         document.querySelector('[property="headline"]').innerText = data.headline;
                         document.querySelector('[property="text"]').innerText = data.text;
                         document.getElementById('about-me-text').innerText = data.about;
+
+                        // Load Projects content
+                        let projectsContent = `<ul>`;
+                        data.projects.items.forEach(item => {
+                            projectsContent += `<li typeof="CreativeWork"><a href="${item.link}" target="_blank" property="url"><span property="name">${item.name}</span></a>: <span property="description">${item.description}</span></li>`;
+                        });
+                        projectsContent += `</ul>`;
+                        document.getElementById('projects-list').innerHTML = projectsContent;
 
                         // Load Contact form labels
                         document.querySelector('#contact-form label[for="name"]').innerText = data.contact.form.name;
@@ -127,4 +139,5 @@
     </script>
 </body>
 </html>
+
 
